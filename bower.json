@@ -1,6 +1,9 @@
 {
   "name": "egermano.dateAgo",
   "version": "0.1.1",
+  "dependencies": {
+    "angular": "~1.4.7"
+  },
   "authors": [
     "Bruno Germano <bruno.germano@gmail.com>"
   ],
@@ -22,8 +25,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "angular": "~1.4.7",
-  }
+  ]
 }
