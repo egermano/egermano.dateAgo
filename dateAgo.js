@@ -12,8 +12,11 @@
   */
 angular.module('egermano.dateAgo', [])
   .fitler('dateAgo', function() {
-    return function(input, options){
+    return function(input){
       if (!input) return input;
+
+      var options = {};
+      if (arguments[1]) options = arguments[1]; 
 
       // This is the easiest way to have default options.
       var settings = $.extend({
