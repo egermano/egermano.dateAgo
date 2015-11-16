@@ -1,6 +1,6 @@
 /**
  * Author: Bruno Germano
- * Date: 2012-09-26 19:45
+ * Date: 2015-11-13 16:30
  * URL: https://github.com/egermano/jquery.dateAgo
  */
 
@@ -11,12 +11,12 @@
   * @return string formated string
   */
 angular.module('egermano.dateAgo', [])
-  .fitler('dateAgo', function() {
+  .filter('dateAgo', function() {
     return function(input){
       if (!input) return input;
 
       var options = {};
-      if (arguments[1]) options = arguments[1]; 
+      if (arguments[1]) options = arguments[1];
 
       // This is the easiest way to have default options.
       var settings = $.extend({
@@ -26,7 +26,7 @@ angular.module('egermano.dateAgo', [])
           hour: 'hour ago',
           hours: 'hours ago',
           yesterday: 'yesterday',
-          days: 'dasy ago'
+          days: 'days ago'
         }
       }, options );
 
