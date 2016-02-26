@@ -30,12 +30,11 @@ angular.module('egermano.dateAgo', [])
         }
       }, options );
 
+      var baseDate = input.split(/-|T|:/);
 
-      var baseDate = input;
-
-      //date from menssage
-      var date = new Date(Date.parse(baseDate)).toLocaleDateString(),
-          hour = new Date(Date.parse(baseDate)).toLocaleTimeString(),
+      //date from message
+      var date = new Date(baseDate[0], baseDate[1]-1, baseDate[2]).toLocaleDateString(), //month is 0-based
+          hour = new Date(baseDate[0], baseDate[1]-1, baseDate[2], baseDate[3], baseDate[4], baseDate[5], baseDate[6]).toLocaleTimeString(),
           _agoDate = new Date(date + ' ' + hour),
           today = new Date(),
 
@@ -62,5 +61,5 @@ angular.module('egermano.dateAgo', [])
       }
 
       return dataText;
-    }
+    };
   });
